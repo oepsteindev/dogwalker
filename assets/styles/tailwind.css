@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+  body {
+    @apply bg-white;
+  }
+}
+
+@layer components {
+  .app {
+    @apply min-h-screen flex items-center justify-center;
+  }
+}
