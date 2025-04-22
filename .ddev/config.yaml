@@ -10,11 +10,11 @@ database:
     type: mariadb
     version: "10.11"
     db_environment:
-      - MYSQL_DATABASE=dogwalker_db
+      - MYSQL_DATABASE=db
 use_dns_when_possible: true
 composer_version: "2"
 web_environment:
-  - MYSQL_DATABASE=dogwalker_db
+  - MYSQL_DATABASE=db
 corepack_enable: false
 
 # Key features of DDEV's config.yaml:

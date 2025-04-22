@@ -12,6 +12,11 @@ logout:
     path: /logout
     controller: App\Controller\SecurityController::logout
 
+dogwalkers:
+    path: /dogwalkers
+    controller: App\Controller\DogwalkerController::index
+    methods: [GET, POST]
+
 register:
     path: /register
     controller: App\Controller\RegistrationController::register
