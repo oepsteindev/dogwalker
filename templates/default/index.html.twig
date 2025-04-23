@@ -10,6 +10,9 @@
     {% else %}
     You are logged out, <a href='{{ path('app_login') }}' class="text-indigo-600 hover:text-indigo-900">Login</a>
 {% endif %}
+
+<a href="#" id="add-customer-link" style="margin: 1em 0; display: inline-block;">Become a Customer</a>
+<input type="hidden" id="user-id" value="{{ app.user.id }}">
 </div>
     <div id="app"></div>
     <div class="container mt-5 text-center">

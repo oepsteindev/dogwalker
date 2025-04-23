@@ -25,10 +25,12 @@
   
   <script setup>
   import { ref } from 'vue'
+  import WalkerCalendar from './WalkerCalendar.vue'
   
   const zip = ref('')
   const walkers = ref([])
   const searched = ref(false)
+  const selectedWalkerId = ref(null) 
   
   async function searchWalkers() {
     searched.value = false
@@ -46,7 +48,8 @@
   }
 
   function selectWalker(walker) {
-    alert(walker.name)
+      console.log(walker.name)
+      selectedWalkerId.value = selectedWalkerId.value === walker.id ? null : walker.id
   }
   </script>
   
