@@ -99,7 +99,7 @@ function handleSubmit() {
       
       <!-- Notes -->
       <div class="mb-6">
-        <label for="notes" class="block text-sm font-medium text-gray-700 mb-1">Notes (Optional)</label>
+        <label for="notes" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
         <textarea 
           id="notes" 
           v-model="eventData.notes" 

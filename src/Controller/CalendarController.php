@@ -96,9 +96,7 @@ class CalendarController extends AbstractController
         
         $event = new Event();
         $event->setTitle($data['title']);
-       
         $event->setStartDateTime(new \DateTime($data['startDateTime']));
-        // $event->setStartDateTime(new \DateTime($data['startDateTime'], new \DateTimeZone('America/New_York')));
         $event->setCustomer($customer);
         $event->setCreatedBy($this->getUser());
         

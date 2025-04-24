@@ -15,9 +15,12 @@
 
       <!-- Display results -->
       <ul v-if="walkers.length" class="mt-4 w-full max-w-md">
-        <li v-for="walker in walkers" :key="walker.id" class="border-b py-2" @click="selectWalker(walker)">
+        <li v-for="walker in walkers" :key="walker.id" 
+         class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100"
+         @click="selectWalker(walker)">
           {{ walker.name }}
         </li>
+        
       </ul>
       <div v-else-if="searched" class="mt-4 text-gray-500">No walkers found.</div>
     </div>
@@ -47,9 +50,16 @@
     }
   }
 
+  // function selectWalker(walker) {
+  //     console.log(walker.name)
+  //     selectedWalkerId.value = selectedWalkerId.value === walker.id ? null : walker.id
+  // }
+ 
+  const emit = defineEmits(['walker-selected']);
+
+  // Function to handle walker selection 
   function selectWalker(walker) {
-      console.log(walker.name)
-      selectedWalkerId.value = selectedWalkerId.value === walker.id ? null : walker.id
+    emit('walker-selected', walker);
   }
   </script>
   

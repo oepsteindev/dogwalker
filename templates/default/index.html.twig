@@ -6,19 +6,19 @@
 {% block body %}
 {% if app.user %}
 <div class="text-right">
-    <a href="{{ path('app_logout') }}" class="text-indigo-600 hover:text-indigo-900">Logout</a>
+    <a href="{{ path('app_logout') }}" class="inline-block bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 px-4 py-2 rounded-md text-sm font-medium text-indigo-600 hover:text-indigo-900">Logout</a>
     {% else %}
-    You are logged out, <a href='{{ path('app_login') }}' class="text-indigo-600 hover:text-indigo-900">Login</a>
+    <a href='{{ path('app_login') }}' class="inline-block bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 px-4 py-2 rounded-md text-sm font-medium text-indigo-600 hover:text-indigo-900">Login</a>
 {% endif %}
 
-<a href="#" id="add-customer-link" style="margin: 1em 0; display: inline-block;">Become a Customer</a>
+<a href="#" id="add-customer-link" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" style="margin: 1em 0; display: inline-block;">Become a Customer</a>
 <input type="hidden" id="user-id" value="{{ app.user.id }}">
 </div>
     <div id="app"></div>
-    <div class="container mt-5 text-center">
-        <h2 class="mb-4">Symfony & Vue.js Integration</h2>
-        <p>This text is rendered by Symfony's Twig template system.</p>
-        <p>The Vue component should appear above this text.</p>
+    <div class="mt-5 mb-5 text-center">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <p style="font-size: 0.8em; color: green; text-align: right;">Dogwalker &copy; 2025 @oepsteindev 360 Studios</p>
+        </div>
     </div>
 {% endblock %} 
 
